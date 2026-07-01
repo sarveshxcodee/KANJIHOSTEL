@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KANJIIIIII BOYS HOSTEL | Premium Living</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <div id="cursor-dot" class="cursor-dot"></div>
+    <div id="cursor-outline" class="cursor-outline"></div>
+
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <h1 class="glitch" data-text="KANJI">KANJI</h1>
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            <p id="loading-text">0%</p>
+        </div>
+    </div>
+
+    <nav id="navbar" class="glass-nav">
+        <div class="nav-brand">KANJI.</div>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#dashboard">Statistics</a></li>
+            <li><a href="#rooms">Rooms</a></li>
+            <li><a href="#residents">Residents</a></li>
+            <li><a href="#notices">Notices</a></li>
+            <li><a href="#admin">Admin</a></li>
+            <li><a href="#settings">Settings</a></li>
+        </ul>
+    </nav>
+
+    <div class="bg-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <main>
+        <section id="hero" class="hero section-padding">
+            <div class="hero-content">
+                <h2 class="subtitle fade-up">WELCOME TO THE FUTURE OF LIVING</h2>
+                <h1 class="title fade-up">KANJI BOYS HOSTEL</h1>
+                <p class="tagline fade-up">Home Away From Home</p>
+                <div class="hero-actions fade-up">
+                    <a href="#rooms" class="btn btn-primary magnetic">Explore Rooms</a>
+                    <a href="#admin" class="btn btn-secondary magnetic">Admin Dashboard</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+            </div>
+        </section>
+
+        <section id="dashboard" class="dashboard section-padding">
+            <div class="section-header">
+                <h2>Live Statistics</h2>
+                <div class="live-indicator"><span class="pulse-dot"></span> Live</div>
+            </div>
+            <div class="stats-grid" id="stats-grid">
+                </div>
+        </section>
+
+        <section id="rooms" class="rooms section-padding">
+            <div class="section-header">
+                <h2>Room Management</h2>
+                <div class="search-bar">
+                    <input type="text" id="search-rooms" placeholder="Search rooms...">
+                </div>
+            </div>
+            <div class="room-grid" id="room-grid">
+                </div>
+        </section>
+
+        <section id="residents" class="residents section-padding">
+            <div class="section-header">
+                <h2>Active Residents</h2>
+                <div class="search-bar">
+                    <input type="text" id="search-residents" placeholder="Search residents...">
+                </div>
+            </div>
+            <div class="resident-grid" id="resident-grid">
+                </div>
+        </section>
+
+        <section id="notices" class="notices section-padding">
+            <div class="section-header">
+                <h2>Notice Board</h2>
+            </div>
+            <div class="notice-grid" id="notice-grid">
+                </div>
+        </section>
+
+        <section id="admin" class="admin section-padding">
+            <div class="section-header">
+                <h2>Admin Control</h2>
+            </div>
+            <div class="admin-container glass-panel">
+                <form id="add-resident-form" class="modern-form">
+                    <h3>Add New Resident</h3>
+                    <div class="form-group">
+                        <input type="text" id="res-name" required placeholder="Resident Name">
+                    </div>
+                    <div class="form-group">
+                        <select id="res-room" required>
+                            <option value="" disabled selected>Assign Room</option>
+                            <option value="202">Room 202</option>
+                            <option value="203">Room 203</option>
+                            <option value="205">Room 205</option>
+                            <option value="206">Room 206</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 magnetic">Assign Resident</button>
+                </form>
+                <div class="admin-actions">
+                    <h3>System Operations</h3>
+                    <button id="export-btn" class="btn btn-secondary">Export Data (JSON)</button>
+                    <button id="reset-btn" class="btn btn-danger">Reset System</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="settings" class="settings section-padding">
+            <div class="section-header">
+                <h2>System Settings</h2>
+            </div>
+            <div class="settings-grid" id="settings-grid">
+                </div>
+        </section>
+        
+        <section id="contact" class="contact section-padding">
+            <div class="section-header">
+                <h2>Contact & Support</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="glass-panel contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>📍 KANJI Hostel Complex, Sector 7</p>
+                    <p>📞 +91 98765 43210</p>
+                    <p>📧 admin@kanjiboys.com</p>
+                </div>
+                <form id="contact-form" class="glass-panel modern-form">
+                    <div class="form-group"><input type="text" placeholder="Name" required></div>
+                    <div class="form-group"><input type="email" placeholder="Email" required></div>
+                    <div class="form-group"><textarea placeholder="Message" rows="4" required></textarea></div>
+                    <button type="submit" class="btn btn-primary magnetic">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="footer-content">
+            <div class="brand">KANJI BOYS HOSTEL</div>
+            <div class="links">
+                <a href="#hero">Back to Top</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; <span id="year"></span> Elite Dev. All rights reserved.
+        </div>
+    </footer>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="project.js"></script>
+</body>
+</html>
